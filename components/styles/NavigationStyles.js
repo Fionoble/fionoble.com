@@ -7,6 +7,7 @@ const NavStyles = styled.ul`
   justify-self: end;
   font-size: 2rem;
   list-style-type: none;
+  height: 200px;
 `;
 
 export default NavStyles;

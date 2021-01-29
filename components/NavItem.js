@@ -2,9 +2,6 @@ import NavItemStyles from './styles/NavItemStyles';
 import NextLink from 'next/link';
 
 const NavItem = (props) => {
-
-
-  
   const Link = props.external ? (p => <a {...p}/>) : NextLink;
 
   return (

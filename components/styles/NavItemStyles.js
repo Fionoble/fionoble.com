@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const NavStyles = styled.li`
   margin: 0 10px 0 0;
   padding: 0;
-  height: 460px;
+  height: 200px;
   background-color: #3e3e3e;
   position: relative;
   flex: 1;
