@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing:inherit;
   }
   body {
+    font-family: 'Architects Daughter', cursive;
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
