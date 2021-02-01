@@ -1,4 +1,4 @@
-import NavItemStyles from './styles/NavItemStyles';
+import NavItemStyles from '../styles/NavItemStyles';
 import NextLink from 'next/link';
 
 const NavItem = (props) => {

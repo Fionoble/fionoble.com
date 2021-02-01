@@ -1,11 +1,8 @@
 import Navigation from './Navigation';
-import AppContainerStyles from './styles/AppContainerStyles';
+import AppContainerStyles from '../styles/AppContainerStyles';
 import {ThemeProvider, createGlobalStyle} from 'styled-components';
 
-const theme = {
-
-};
-
+const theme = {};
 
 const GlobalStyle = createGlobalStyle`
   html {
