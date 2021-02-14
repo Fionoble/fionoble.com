@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 const Layout = styled.div`
   width: 100%;
@@ -17,6 +18,11 @@ function Home() {
     <p>I built this site to expand all areas of my development craft. Check out the architecture and code here! [Github link here]</p>
     <p>I used to have an old blog <a href="http://fionoble.com/blog">here,</a> but I decided to start over.</p>
     <p>Here's a picture</p>
+    <Image 
+      src="/lulz.jpg"
+      width={800}
+      height={600}
+    />
   </Layout>
 }
 

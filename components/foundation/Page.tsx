@@ -1,6 +1,7 @@
-import Navigation from './Navigation';
-import AppContainerStyles from '../styles/AppContainerStyles';
 import {ThemeProvider, createGlobalStyle} from 'styled-components';
+import AppContainerStyles from '../styles/AppContainerStyles';
+import Navigation from './Navigation';
+import Footer from './Footer';
 
 const theme = {};
 
@@ -31,6 +32,7 @@ function Page(props) {
         <AppContainerStyles>
           <Navigation />
           {props.children}
+          <Footer />
         </AppContainerStyles>
       </>
     </ThemeProvider>

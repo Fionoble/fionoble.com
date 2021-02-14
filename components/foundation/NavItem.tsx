@@ -1,17 +1,17 @@
-import NavItemStyles from '../styles/NavItemStyles';
+import {NavItem as StyledNavItem} from '../styles/NavigationStyles';
 import NextLink from 'next/link';
 
 const NavItem = (props) => {
-  const Link = props.external ? (p => <a {...p}/>) : NextLink;
+  const Link = props.external ? (p => <a {...p} tartget="_blank"/>) : NextLink;
 
   return (
-    <NavItemStyles>
+    <StyledNavItem>
       <Link href={props.link}>
         <div className="nav-item-title">
           {props.label}
         </div>
       </Link>
-    </NavItemStyles>
+    </StyledNavItem>
   )
 };
 
