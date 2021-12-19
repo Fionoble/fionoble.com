@@ -19,9 +19,9 @@ function Home() {
     <p>I used to have an old blog <a href="http://fionoble.com/blog">here,</a> but I decided to start over.</p>
     <p>Here's a picture</p>
     <Image 
-      src="/lulz.jpg"
-      width={800}
-      height={600}
+      src="/avatar.JPG"
+      width={240}
+      height={330}
     />
   </Layout>
 }

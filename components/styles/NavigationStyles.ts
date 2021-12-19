@@ -14,10 +14,12 @@ const NavItem = styled.li`
   margin: 0 10px 0 0;
   padding: 0;
   height: 200px;
-  background-color: #3e3e3e;
+  background-color: #fff;
   position: relative;
   flex: 1;
   list-style-type: none;
+  border: 3px black solid;
+  border-top: 0px;
 
   .nav-item-title {
     width: 100%;
@@ -25,7 +27,12 @@ const NavItem = styled.li`
     position: absolute;
     bottom: 5px;
     font-size: 24px;
-    color: #cecece;
+    color: #000;
+  }
+
+  &:hover {
+    height: 230px;
+    transition: height 0.1s ease-out;
   }
 `;
 
