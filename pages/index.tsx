@@ -9,19 +9,20 @@ const Layout = styled.div`
     font-size: 20px;
   }
 `;
+const imageLayout = styled.div``;
 // const Hero = styled.div``;
 // const Content = styled.div``;
 
 function Home() {
   return <Layout>
     <h1>Welcome my little corner of the internet!</h1>
-    <p>I built this site to expand all areas of my development craft. Check out the architecture and code here! [Github link here]</p>
-    <p>I used to have an old blog <a href="http://fionoble.com/blog">here,</a> but I decided to start over.</p>
-    <p>Here's a picture</p>
+    <p>This is where I do things!</p>
+    <p></p>
+    
     <Image 
-      src="/lulz.jpg"
-      width={800}
-      height={600}
+      src="/avatar.JPG"
+      width={240}
+      height={330}
     />
   </Layout>
 }
