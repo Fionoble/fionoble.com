@@ -16,7 +16,7 @@ const imageLayout = styled.div``;
 function Home() {
   return <Layout>
     <h1>Welcome my little corner of the internet!</h1>
-    <p></p>
+    <p>THis is where I do things</p>
     <p></p>
     
     <Image 
