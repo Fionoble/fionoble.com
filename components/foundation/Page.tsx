@@ -1,4 +1,4 @@
-import {ThemeProvider, createGlobalStyle} from 'styled-components';
+import Styles, {ThemeProvider, createGlobalStyle} from 'styled-components';
 import AppContainerStyles from '../styles/AppContainerStyles';
 import Navigation from './Navigation';
 import Footer from './Footer';
@@ -22,7 +22,12 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.5rem;
     line-height: 2;
   }
-`
+`;
+
+const Content = Styles.div`
+  min-height: 600px;
+  max-height: 600px;
+`;
 
 function Page(props) {
   return (
@@ -31,7 +36,9 @@ function Page(props) {
         <GlobalStyle />
         <AppContainerStyles>
           <Navigation />
-          {props.children}
+          <Content>
+            {props.children}
+          </Content>
           <Footer />
         </AppContainerStyles>
       </>
