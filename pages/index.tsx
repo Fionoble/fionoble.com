@@ -19,9 +19,9 @@ function Home() {
     <h1>Welcome my little corner of the internet!</h1>
     <ImageLayout>
       <Image 
-        src="/avatar.JPG"
+        src="/welcome_wave.jpg"
         width={240}
-        height={330}
+        height={440}
         alt="A picture of me!"
       />
     </ImageLayout>
