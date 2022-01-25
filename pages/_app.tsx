@@ -3,14 +3,19 @@ import Page  from '../components/foundation/Page'
 
 class AppPage extends App {
   render() {
-    const {Component} = this.props;
+    const {Component, pageProps} = this.props;
 
     return (
       <Page>
-        <Component />
+        <Component {...pageProps} />
       </Page>
     )
   }
+}
+
+AppPage.getInitialProps = async (appContext) => {
+  const appProps = await App.getInitialProps(appContext)
+  return { ...appProps }
 }
 
 export default AppPage ;
