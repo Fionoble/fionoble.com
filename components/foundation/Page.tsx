@@ -21,12 +21,13 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
+    background: url('/bg.jpg');
+    background-size: 300px 300px;
   }
 `;
 
 const Content = Styles.div`
-  min-height: 600px;
-  max-height: 600px;
+  
 `;
 
 function Page(props) {
