@@ -1,11 +1,7 @@
 import matter from 'gray-matter'
 
-function PostTemplate({data, content}) {
-  // This holds the data between `---` from the .md file
-  // const {data:metadata = {}, content} = data;
+function PostPage({data, content}) {
   const {title} = data;
-
-  console.log(data)
 
   return (
     <>
@@ -15,7 +11,7 @@ function PostTemplate({data, content}) {
   )
 }
 
-PostTemplate.getInitialProps = async (context) => {
+PostPage.getInitialProps = async (context) => {
   const { slug } = context.query
   
   // Import our .md file using the `slug` from the URL
@@ -28,4 +24,4 @@ PostTemplate.getInitialProps = async (context) => {
   return { ...data };
 }
 
-export default PostTemplate;
+export default PostPage;

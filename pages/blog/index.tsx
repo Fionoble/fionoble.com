@@ -1,5 +1,85 @@
-function BlogIndex() {
-  return <div>Blog time!</div>
+import styled, {css} from 'styled-components';
+import Image from "next/image";
+import Link from "next/link";
+
+const PostPreviewCard = styled.div`
+  margin: 20px;
+  padding: 8px;
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  position: relative;
+  flex-grow: 0;
+  border: 3px black solid;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+  overflow: hidden;
+  text-overflow: elipsis;
+  transition: transform 0.3s;
+
+  ${props => {
+    return (css`
+      transform: rotate(${props.rotation}deg); 
+
+      &:hover {
+        transform: rotate(${props.rotation}deg) translateY(5px); 
+      }
+    `)}
+  }
+
+`;
+
+const Title = styled.div`
+  font-size: 18px;
+  font-weight: 900;
+`;
+const TimeStamp = styled.div`
+  font-size: 11px;
+  font-weight: 900;
+`;
+
+const ImageWrapper = styled.div`
+  border: 1px black solid;
+  line-height: 0;
+`;
+
+const PostPreviewContainer = styled.div`
+  display: flex;
+  with: 100%;
+  flex-wrap: wrap;
+`;
+
+function PostPage({data}) {
+
+  console.log("Posts", data)
+
+  return (
+    <>
+      <h1>Here are some of my thoughts</h1>
+      <PostPreviewContainer>
+        {data.map(((post, index) => {
+        const slightRandomRotation = `${index % 2 == 0 ? '-' : ''}${(Math.random() * 2)}`;
+        return (
+          <Link href={`/blog/${post.slug}`} key={index}>
+            <PostPreviewCard rotation={slightRandomRotation}>
+              <Title>{post.title}</Title>
+              <TimeStamp>{post.date}</TimeStamp>
+              <ImageWrapper>
+                <Image src={post.thumbnail} layout="fixed" width="100" height="100" />
+              </ImageWrapper>
+              <div>{post.excerpt}</div>
+            </PostPreviewCard>
+          </Link>
+        )}))}
+      </PostPreviewContainer>
+    </>
+  )
 }
 
-export default BlogIndex;
+PostPage.getInitialProps = async () => {
+  const content = await import(`../../_blog/blog-index.json`);
+  const data = content.default;
+  
+  return { data };
+}
+
+export default PostPage;
