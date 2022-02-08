@@ -53,12 +53,13 @@ function PostPage({data}) {
 
   return (
     <>
-      <h1>Here are some of my thoughts</h1>
+      <h1>{`Here are some of my thoughts`}</h1>
+      <p>{`This is an attempt to capture some of my thoughts and expereinces online so that I can share them. Maybe others could learn from them.`}</p>
       <PostPreviewContainer>
         {data.map(((post, index) => {
         const slightRandomRotation = `${index % 2 == 0 ? '-' : ''}${(Math.random() * 2)}`;
         return (
-          <Link href={`/blog/${post.slug}`} key={index} passHref>
+          <Link href={`/side-projects/${post.slug}`} key={index} passHref>
             <PostPreviewCard rotation={slightRandomRotation}>
               <Title>{post.title}</Title>
               <TimeStamp>{post.date}</TimeStamp>
@@ -75,7 +76,7 @@ function PostPage({data}) {
 }
 
 PostPage.getInitialProps = async () => {
-  const content = await import(`../../content/blog/index.json`);
+  const content = await import(`../../content/side-projects/index.json`);
   const data = content.default;
   
   return { data };

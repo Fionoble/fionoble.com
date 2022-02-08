@@ -1,5 +1,6 @@
 import App from 'next/app';
-import Page  from '../components/foundation/Page'
+import Page  from '../components/foundation/Page';
+import '../styles/markdown.css'
 
 class AppPage extends App {
   render() {

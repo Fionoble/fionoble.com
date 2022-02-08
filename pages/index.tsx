@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Layout = styled.div`
   width: 100%;
@@ -25,8 +26,20 @@ function Home() {
         alt="A picture of me!"
       />
     </ImageLayout>
-    <p>This is where I do things!This is where I do things!This is where I do things!This is where I do things!This is where I do things!This is where I do things!This is where I do things!This is where I do things!This is where I do things!This is where I do things!This is where I do things!This is where I do things!This is where I do things!This is where I do things!This is where I do things!</p>
-    
+    <p>
+      {`I'm Phiroze Noble (or Fionoble). I'm a Web Development manager based out of Toronto, Canada. 
+      I like warm hugs and great conversations! I decided to make this site for fun and so that 
+      I wouldn't lose touch with the technical parts of web development. That and to share all the fun 
+      things I'm working on! Fun is relative though 😅 I mean, I definitely find them fun!`}
+    </p>
+    <div>
+      {`If you're interested in getting in touch:`}
+      <ul>
+        <li>Linked In</li>
+        <li>Github</li>
+        <li>Instagram</li>
+      </ul>
+    </div>
   </Layout>
 }
 

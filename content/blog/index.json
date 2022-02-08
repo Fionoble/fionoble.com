@@ -2,6 +2,7 @@
   {
     "title": "First blog post",
     "date": "Jan. 31st, 2022",
+    "alt": "image alt",
     "excerpt": "This is my very first blog post. It's pretty cool amirite?",
     "thumbnail": "/thumbnails/lulz.jpg",
     "slug": "test"
@@ -9,6 +10,7 @@
   {
     "title": "Second ever blog post",
     "date":  "Jan. 31st, 2022",
+    "alt": "image alt",
     "excerpt": "This is my second ever blog post. It's pretty decent amirite?",
     "thumbnail": "/thumbnails/wave.jpg",
     "slug": "this-is-a-test"

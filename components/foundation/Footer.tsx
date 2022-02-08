@@ -5,7 +5,8 @@ function Footer() {
     <FooterContainer>
       <Copyright>Copyright Fionoble.com 2021</Copyright>
       <FollowMeWrapper>
-        <FollowMeItem>In</FollowMeItem>
+        <FollowMeItem>G</FollowMeItem>
+        <FollowMeItem>I</FollowMeItem>
         <FollowMeItem>T</FollowMeItem>
       </FollowMeWrapper>
     </FooterContainer>
