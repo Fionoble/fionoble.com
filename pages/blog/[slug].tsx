@@ -1,14 +1,15 @@
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
+import {PageLayout} from '../../components/styles/PageStyles';
 
 function PostPage({data, content}) {
   const {title} = data;
 
   return (
-    <>
+    <PageLayout>
       <h1>{title}</h1>
       <ReactMarkdown>{content}</ReactMarkdown>
-    </>
+    </PageLayout>
   )
 }
 

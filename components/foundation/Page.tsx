@@ -24,10 +24,13 @@ const GlobalStyle = createGlobalStyle`
     background: url('/bg.jpg');
     background-size: 300px 300px;
   }
+  #__next{
+    height: 100%;
+  }
 `;
 
 const Content = Styles.div`
-  
+  height: 100%;
 `;
 
 function Page(props) {

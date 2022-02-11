@@ -1,23 +1,16 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-import Link from 'next/link';
+import {PageLayout} from '../components/styles/PageStyles';
 
-const Layout = styled.div`
-  width: 100%;
-  padding: 20px;
 
-  h1 {
-    font-size: 20px;
-  }
-`;
 const ImageLayout = styled.div`
   float: left;
   padding-right: 25px;
 `;
 
 function Home() {
-  return <Layout>
-    <h1>Welcome my little corner of the internet!</h1>
+  return <PageLayout>
+    <h1>{`Welcome to my little corner of the internet!`}</h1>
     <ImageLayout>
       <Image 
         src="/welcome_wave.jpg"
@@ -40,7 +33,7 @@ function Home() {
         <li>Instagram</li>
       </ul>
     </div>
-  </Layout>
+  </PageLayout>
 }
 
 export default Home;

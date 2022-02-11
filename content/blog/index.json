@@ -14,5 +14,13 @@
     "excerpt": "This is my second ever blog post. It's pretty decent amirite?",
     "thumbnail": "/thumbnails/wave.jpg",
     "slug": "this-is-a-test"
+  },
+  {
+    "title": "A third blog post",
+    "date":  "Feb. 10th, 2022",
+    "alt": "image alt",
+    "excerpt": "Demon slayer is dope.",
+    "thumbnail": "/thumbnails/ds-2.jpeg",
+    "slug": "demon-slayer"
   }
 ]
