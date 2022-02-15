@@ -30,7 +30,12 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Content = Styles.div`
-  height: 100%;
+  width: 100%;
+  padding: 20px;
+
+  h1 {
+    font-size: 20px;
+  }
 `;
 
 function Page(props) {

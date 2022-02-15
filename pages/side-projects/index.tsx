@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import {PageLayout} from '../../components/styles/PageStyles';
 import {
   PostPreviewContainer, 
   PostPreviewCard, 
@@ -11,7 +10,7 @@ import {
 
 function PostPage({data}) {
   return (
-    <PageLayout>
+    <>
       <h1>{`Side Projects`}</h1>
       <p>{`I've realized that I have a ton of hobbies and side projects. 
       So this is an attempt to capture some of them and share them with 
@@ -32,7 +31,7 @@ function PostPage({data}) {
           </Link>
         )}))}
       </PostPreviewContainer>
-    </PageLayout>
+    </>
   )
 }
 
