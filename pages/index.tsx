@@ -13,7 +13,7 @@ const ConnectLinkStyled = styled.li`
   font-weight: 800;
   display:flex;
   align-items: center;
-  transition: padding 0.3s;
+  transition: padding 0.1s;
   margin-bottom: 20px;
   color: black;
 
@@ -60,9 +60,9 @@ function Home() {
       </ImageLayout>
       <p>
         {`I'm Phiroze Noble (or Fionoble). I'm a Web Development manager based out of Toronto, Canada. 
-        I like warm hugs, coffee and great conversations! I decided to make this site for fun and so that 
-        I wouldn't lose touch with the technical parts of web development. That and to share all the fun 
-        things I'm working on! `}
+        I like warm hugs, coffee and great conversations! I decided to make this site for fun and really... 
+        who is a web dev without a web site? That and I wanted to share all the fun things I'm working on! 
+        I have a ton of hobbies (more so since COVID) and this was the best way I could think of to share them.`}
       </p>
       <div>
         <h3>{`If you're interested in getting in touch:`}</h3>

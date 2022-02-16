@@ -1,5 +1,4 @@
-import Styles, {ThemeProvider, createGlobalStyle} from 'styled-components';
-import AppContainerStyles from '../styles/AppContainerStyles';
+import styled, {ThemeProvider, createGlobalStyle} from 'styled-components';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
@@ -29,13 +28,19 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Content = Styles.div`
+const Content = styled.div`
   width: 100%;
   padding: 20px;
 
   h1 {
     font-size: 20px;
   }
+`;
+
+const AppContainerStyles = styled.div`
+  margin: 0 auto;
+  max-width: 1100px;
+  background: rgba(255, 255, 255, 0.9);
 `;
 
 function Page(props) {
