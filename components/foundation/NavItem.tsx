@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import Image from 'next/image';
+import useWindowSize from '../../utils/useWindowSize';
 
 const StyledNavItem = styled.li`
   margin: 0 10px 0 0;
@@ -50,33 +52,54 @@ const StyledNavItem = styled.li`
       height: 60px;
       transition: background-color 0.1s ease-out;
     }
+  }
 
-    @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 600px) {
+    height: 50px;
+    margin: 0;
+
+    .nav-item-title {
+      font-size: 14px;
+    }
+
+    &:active {
+      background-color: #ddd;
+    }
+
+    &:hover {
       height: 50px;
-      margin: 0;
-  
-      .nav-item-title {
-        font-size: 14px;
-      }
-  
-      &:active {
-        background-color: #ddd;
-      }
-  
-      &:hover {
-        height: 60px;
-        transition: background-color 0.1s ease-out;
-      }
+      transition: background-color 0.1s ease-out;
+    }
   }
 `;
 
+const NavIconWrapper = styled.div`
+  margin: 0 auto;
+`;
+
+const NavIcon = (props: {iconUrl: string}) =>  (
+  <NavIconWrapper>
+    <Image 
+      width="25"
+      height="25"
+      src={props.iconUrl}
+    />
+  </NavIconWrapper>
+)
+
 const NavItem = (props) => {
   // TODO - Make an onclick and programmatically send them to the external links
-  if(props.external) return (
+  const {icon, label, link, external} = props;
+  const screen = useWindowSize();
+
+  const content = (screen.width && screen.width < 601 ? 
+    <NavIcon iconUrl={icon} /> : label)
+
+  if(external) return (
     <StyledNavItem>
-      <a href={props.link} target="_blank" rel="noreferrer">
+      <a href={link} target="_blank" rel="noreferrer">
         <div className="nav-item-title">
-          {props.label}
+          {content}
         </div>
       </a>
     </StyledNavItem>
@@ -84,10 +107,10 @@ const NavItem = (props) => {
  
 
   return (
-    <Link href={props.link} passHref={props.external}>
+    <Link href={link} passHref>
       <StyledNavItem>
         <div className="nav-item-title">
-          {props.label}
+          {content}
         </div>
       </StyledNavItem>
     </Link>

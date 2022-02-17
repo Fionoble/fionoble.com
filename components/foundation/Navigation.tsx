@@ -14,14 +14,36 @@ const StyledNav = styled.ul`
   left: 0;
   right: 0;
   max-width: 1100px;
+  z-index: 10;
 `;
 
 const Navigation = () => (
   <StyledNav>
-    <NavItem link="/" label="About Me" image=""/>
-    <NavItem link="/blog" label="Blog" image=""/>
-    <NavItem link="/side-projects" label="Side Projects" image=""/>
-    <NavItem link="https://fionoble.shop" external label="Shop" image=""/>
+    <NavItem 
+      link="/" 
+      label="About Me" 
+      icon="/nav/about-me.png" 
+      image=""
+    />
+    <NavItem 
+      link="/blog" 
+      label="Blog" 
+      icon="/nav/blog.png"
+      image=""
+    />
+    <NavItem 
+      link="/side-projects" 
+      label="Side Projects" 
+      icon="/nav/side-projects.png" 
+      image=""
+    />
+    <NavItem 
+      link="https://fionoble.shop" 
+      external 
+      label="Shop" 
+      icon="/nav/shop.png" 
+      image=""
+    />
   </StyledNav>
 );
 

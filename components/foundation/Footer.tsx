@@ -17,10 +17,14 @@ const Copyright = styled.div`
   font-size: 14px;
   order: 1;
   flex-grow: 2;
+  @media only screen and (max-width: 800px) {
+    font-size: 12px;
+  }
 `;
 
 const FollowMeWrapper = styled.ul`
   order: 2;
+  padding-left: 0px
 `;
 
 const FollowMeItem = styled.li`
@@ -33,9 +37,9 @@ const FollowMeItem = styled.li`
   color: black;
   transition: transform 0.1s;
 
-  :hover {
-    transform: translateY(-5px);
-  }
+  :first { margin-left: 0px; }
+
+  :hover { transform: translateY(-5px); }
 `;
 
 type ConnectLinkProps = {
