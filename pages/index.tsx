@@ -1,11 +1,33 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 
-
 const ImageLayout = styled.div`
-  float: left;
-  padding-right: 25px;
+  @media only screen and (min-width: 520px) {
+    padding-right: 25px;
+    float: left;
+  }
+
+  @media only screen and (max-width: 520px) {
+    margin: 0 auto;
+    display: block;
+    width: 240px;
+  }
 `;
+
+const MainContent = styled.p``;
+const SocialWrapper = styled.div`
+  @media only screen and (max-width: 640px) {
+    clear: both;
+    width: 100%;
+  }
+`;
+
+const ConnectListWrapper = styled.ul`
+  @media only screen and (max-width: 640px) {
+    padding-left: 0;
+  }
+`;
+
 
 const ConnectLinkStyled = styled.li`
   list-style-type: none;
@@ -19,6 +41,7 @@ const ConnectLinkStyled = styled.li`
 
   div {
     padding-left: 10px;
+    
   }
 
   :hover {
@@ -58,15 +81,15 @@ function Home() {
           alt="A picture of me!"
         />
       </ImageLayout>
-      <p>
+      <MainContent>
         {`I'm Phiroze Noble (or Fionoble). I'm a Web Development manager based out of Toronto, Canada. 
         I like warm hugs, coffee and great conversations! I decided to make this site for fun and really... 
         who is a web dev without a web site? That and I wanted to share all the fun things I'm working on! 
         I have a ton of hobbies (more so since COVID) and this was the best way I could think of to share them.`}
-      </p>
-      <div>
+      </MainContent>
+      <SocialWrapper>
         <h3>{`If you're interested in getting in touch:`}</h3>
-        <ul>
+        <ConnectListWrapper>
           <ConnectLink 
             imgSrc="/icons/linkedin.png" 
             mediaLink="https://www.linkedin.com/in/fionoble">
@@ -82,8 +105,8 @@ function Home() {
             mediaLink="https://www.instagram.com/fionoble/">
               Instagram
           </ConnectLink>
-        </ul>
-      </div>
+        </ConnectListWrapper>
+      </SocialWrapper>
     </>
   );
 }
