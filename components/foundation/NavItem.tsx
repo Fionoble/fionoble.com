@@ -23,9 +23,50 @@ const StyledNavItem = styled.li`
     color: #000;
   }
 
-  &:hover {
-    height: 230px;
-    transition: height 0.1s ease-out;
+  &:last-child{
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 800px) {
+    &:hover {
+      height: 230px;
+      transition: height 0.1s ease-out;
+    }
+  }
+
+  // Mobile
+  @media only screen and (max-width: 800px) {
+    height: 60px;
+
+    .nav-item-title {
+      font-size: 18px;
+    }
+
+    &:active {
+      background-color: #ddd;
+    }
+
+    &:hover {
+      height: 60px;
+      transition: background-color 0.1s ease-out;
+    }
+
+    @media only screen and (max-width: 600px) {
+      height: 50px;
+      margin: 0;
+  
+      .nav-item-title {
+        font-size: 14px;
+      }
+  
+      &:active {
+        background-color: #ddd;
+      }
+  
+      &:hover {
+        height: 60px;
+        transition: background-color 0.1s ease-out;
+      }
   }
 `;
 

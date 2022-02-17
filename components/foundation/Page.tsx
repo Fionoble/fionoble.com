@@ -32,6 +32,16 @@ const Content = styled.div`
   width: 100%;
   padding: 20px;
 
+  padding-top: 200px;
+
+  @media only screen and (max-width: 800px) {
+    padding-top: 80px;
+  }
+    
+  @media only screen and (max-width: 600px) {
+    padding-top: 50px;    
+  }
+
   h1 {
     font-size: 20px;
   }
