@@ -1,5 +1,19 @@
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
+import Image from 'next/image';
+
+const MarkdownComponents: object = {
+  img: image => {
+    return (
+      <Image
+        src={image.properties.src}
+        alt={image.properties.alt}
+        height="768"
+        width="432"
+      />
+    )
+  },
+}
 
 function PostPage({data, content}) {
   const {title} = data;
@@ -7,7 +21,7 @@ function PostPage({data, content}) {
   return (
     <>
       <h1>{title}</h1>
-      <ReactMarkdown>{content}</ReactMarkdown>
+      <ReactMarkdown components={MarkdownComponents}>{content}</ReactMarkdown>
     </>
   )
 }

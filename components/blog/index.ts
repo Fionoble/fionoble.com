@@ -5,7 +5,7 @@ export const PostPreviewCard = styled.div`
   padding: 8px;
   width: 300px;
   height: 300px;
-  background-color: #fff;
+  background-color: #fffdba;
   position: relative;
   flex-grow: 0;
   border: 2px black solid;
@@ -37,6 +37,7 @@ export const TimeStamp = styled.div`
 
 export const ImageWrapper = styled.div`
   line-height: 0;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
 `;
 
 export const PostPreviewContainer = styled.div`

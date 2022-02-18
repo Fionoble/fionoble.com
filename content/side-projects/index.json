@@ -1,11 +1,11 @@
 [
   {
-    "title": "First blog post",
-    "date": "Jan. 31st, 2022",
-    "alt": "image alt",
-    "excerpt": "This is my very first blog post. It's pretty cool amirite?",
-    "thumbnail": "/thumbnails/lulz.jpg",
-    "slug": "drawing"
+    "title": "Fionoble.com",
+    "date": "Feb. 17th, 2022",
+    "alt": "Website Thumbnail",
+    "excerpt": "It felt appropriate the the first project I post about be this site.",
+    "thumbnail": "/thumbnails/website.png",
+    "slug": "fionoble-com"
   },
   {
     "title": "Second ever blog post",

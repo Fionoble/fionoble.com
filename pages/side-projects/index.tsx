@@ -24,7 +24,7 @@ function PostPage({data}) {
               <Title>{post.title}</Title>
               <TimeStamp>{post.date}</TimeStamp>
               <ImageWrapper>
-                <Image src={post.thumbnail} layout="fixed" width="100" height="100" alt={post.alt} />
+                <Image src={post.thumbnail} layout="fixed" width="280" height="100" alt={post.alt} />
               </ImageWrapper>
               <div>{post.excerpt}</div>
             </PostPreviewCard>

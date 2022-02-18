@@ -36,7 +36,7 @@ const StyledNavItem = styled.li`
     }
   }
 
-  // Mobile
+  // Tablet
   @media only screen and (max-width: 800px) {
     height: 60px;
 
@@ -54,12 +54,14 @@ const StyledNavItem = styled.li`
     }
   }
 
+  // Mobile
   @media only screen and (max-width: 600px) {
     height: 50px;
     margin: 0;
 
     .nav-item-title {
       font-size: 14px;
+      bottom: -5px;
     }
 
     &:active {
@@ -80,8 +82,8 @@ const NavIconWrapper = styled.div`
 const NavIcon = (props: {iconUrl: string}) =>  (
   <NavIconWrapper>
     <Image 
-      width="25"
-      height="25"
+      width="40"
+      height="40"
       src={props.iconUrl}
     />
   </NavIconWrapper>
