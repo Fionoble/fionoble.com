@@ -24,13 +24,15 @@ I know these aren't new and shiny but I'm familiar with them and I opted to ship
 
 Vercel's experience with hosting was actually quite nice. It was easy to get up and runing and for one personal project I don't have to pay anything. That may change once this site takes off and I need to start handling crazy high traffic. (Tone: sarcasm). 
 
-<img src="/blog/vercel-screen.png" alt="Screen shot of Vercel" />
+![Screen shot of Vercel](/blog/vercel-screen.png)
 
 It was also extremely simple to set up CI with github. Then I set up some simple github workflows to running linting and type-checks. I didn't set up tests because... well it's just my personal site and there isn't much to test. That and tests are super annoying to write... yea, I said it. 
 
-The style I went for was hand drawn. Not a new concept but I enjoy it and I've been recently trying to get back my drawing and art skills so it just felt appropriate for me.
+The style I went for was hand drawn. Not a new concept but I enjoy it and I've been recently trying to get back my drawing and art skills so it just felt appropriate for me. I also took the opportunity to use procreate and draw out the icons and the background. 
+
+![Quick Avatar {1000x1000}](/bg.jpg) 
 
 I think the funniest part is that I had worked on a hand drawn avatar of myself which took me over a week to complete and I was more or less content with it. Then when I started building this site I wanted to do a welcome avatar waving to my visitors to make the expereince a little warmer. I litereally spent 30 mintues on this avatar start to finish and I actually like it SO much more than the one I spent over a week on. Funny how things played out!
 
-<img portrait src="/blog/avatar.jpg" alt="Long Avatar" />
-<img portrait src="/welcome_wave.jpg" alt="Quick Avatar" />
+![Long Avatar {240x330}](/blog/avatar.jpg) 
+![Quick Avatar {240x440}](/welcome_wave.jpg) 

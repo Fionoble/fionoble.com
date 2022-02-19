@@ -1,19 +1,6 @@
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
-import Image from 'next/image';
-
-const MarkdownComponents: object = {
-  img: image => {
-    return (
-      <Image
-        src={image.properties.src}
-        alt={image.properties.alt}
-        height="768"
-        width="432"
-      />
-    )
-  },
-}
+import MarkdownComponents from '../../components/MarkdownComponents';
 
 function PostPage({data, content}) {
   const {title} = data;
