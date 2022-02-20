@@ -34,5 +34,6 @@ The style I went for was hand drawn. Not a new concept but I enjoy it and I've b
 
 I think the funniest part is that I had worked on a hand drawn avatar of myself which took me over a week to complete and I was more or less content with it. Then when I started building this site I wanted to do a welcome avatar waving to my visitors to make the expereince a little warmer. I litereally spent 30 mintues on this avatar start to finish and I actually like it SO much more than the one I spent over a week on. Funny how things played out!
 
-![Long Avatar {240x330}](/blog/avatar.jpg) 
-![Quick Avatar {240x440}](/welcome_wave.jpg) 
+![Long Avatar {240x330}{float}](/blog/avatar.jpg) 
+
+![Quick Avatar {175x320}{float}](/blog/welcome_wave.jpg) 
