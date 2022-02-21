@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 import useWindowSize from '../../utils/useWindowSize';
@@ -15,6 +15,17 @@ const StyledNavItem = styled.li`
   border-top: 0px;
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
   cursor: pointer;
+  transition: height 0.1s;
+
+
+  ${props => {
+    if(props.miniNav) {
+
+      return (css`
+        height: 70px;
+      `)}
+    }
+  }
 
   .nav-item-title {
     width: 100%;
@@ -91,14 +102,14 @@ const NavIcon = (props: {iconUrl: string}) =>  (
 
 const NavItem = (props) => {
   // TODO - Make an onclick and programmatically send them to the external links
-  const {icon, label, link, external} = props;
+  const {icon, label, link, external, miniNav} = props;
   const screen = useWindowSize();
 
   const content = (screen.width && screen.width < 601 ? 
     <NavIcon iconUrl={icon} /> : label)
 
   if(external) return (
-    <StyledNavItem>
+    <StyledNavItem miniNav={miniNav}>
       <a href={link} target="_blank" rel="noreferrer">
         <div className="nav-item-title">
           {content}
@@ -110,7 +121,7 @@ const NavItem = (props) => {
 
   return (
     <Link href={link} passHref>
-      <StyledNavItem>
+      <StyledNavItem miniNav={miniNav}>
         <div className="nav-item-title">
           {content}
         </div>

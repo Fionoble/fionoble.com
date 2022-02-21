@@ -1,4 +1,5 @@
 import styled, {ThemeProvider, createGlobalStyle} from 'styled-components';
+import {useParallax} from 'react-scroll-parallax';
 import Navigation from './Navigation';
 import Footer from './Footer';
 
