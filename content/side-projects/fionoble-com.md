@@ -1,7 +1,6 @@
 ---
 title: 'This website'
-excerpt: ''
-coverImage: '/.jpg'
+excerpt: 'This will be used for something'
 date: '2020-03-16T05:35:07.322Z'
 ---
 
@@ -18,7 +17,9 @@ So now, more about the site. What did I build it with:
 * [Styled Components](https://styled-components.com/)
 * [React Markdown](https://github.com/remarkjs/react-markdown)
 * No DB (yet)
-* Hosted Vercel (CI included)
+* Hosted with Vercel (CI included)
+
+### You can see the source [here](https://github.com/Fionoble/fionoble.com).
 
 I know these aren't new and shiny but I'm familiar with them and I opted to ship something sooner rather than learning something new. I'll be looking into other side projects where I'll get to explore some of the new and shiny things (like [remix](https://remix.run/)) soon.
 
@@ -34,8 +35,8 @@ The style I went for was hand drawn. Not a new concept but I enjoy it and I've b
 
 I think the funniest part is that I had worked on a hand drawn avatar of myself which took me over a week to complete and I was more or less content with it. Then when I started building this site I wanted to do a welcome avatar waving to my visitors to make the expereince a little warmer. I litereally spent 30 mintues on this avatar start to finish and I actually like it SO much more than the one I spent over a week on. Funny how things played out!
 
-![Long Avatar {240x330}{float}](/blog/avatar.jpg) 
+![Long Avatar {240x330}](/blog/avatar.jpg) 
 
-![Quick Avatar {175x320}{float}](/blog/welcome_wave.jpg) 
+![Quick Avatar {240x440}](/blog/welcome_wave.jpg) 
 
 As I wrote this post (which took about a week to finish) I discovered multiple things that needed to be addressed on the site, so this post is my first post but also my first QA pass onthe site. I defeintely recommend the ship and iterate approach. I honestly don't think I would have shipped anything if I were just trying to account for all everything before shipping a "V1".

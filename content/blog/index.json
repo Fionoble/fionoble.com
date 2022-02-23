@@ -14,29 +14,5 @@
     "excerpt": "This is my very first blog post. It's pretty cool amirite?",
     "thumbnail": "/thumbnails/lulz.jpg",
     "slug": "test"
-  },
-  {
-    "title": "Second ever blog post",
-    "date":  "Jan. 31st, 2022",
-    "alt": "image alt",
-    "excerpt": "This is my second ever blog post. It's pretty decent amirite?",
-    "thumbnail": "/thumbnails/wave.jpg",
-    "slug": "this-is-a-test"
-  },
-  {
-    "title": "A third blog post",
-    "date":  "Feb. 10th, 2022",
-    "alt": "image alt",
-    "excerpt": "Demon slayer is dope.",
-    "thumbnail": "/thumbnails/ds-2.jpeg",
-    "slug": "demon-slayer"
-  },
-  {
-    "title": "Numba for",
-    "date":  "Feb. 10th, 2022",
-    "alt": "image alt",
-    "excerpt": "Demon slayer is dope.",
-    "thumbnail": "/thumbnails/ds-2.jpeg",
-    "slug": "demon-slayer"
   }
 ]
