@@ -1,18 +1,18 @@
 [
   {
-    "title": "Blog post zero",
-    "date": "Jan. 31st, 2022",
+    "title": "Super handy (but aso dangerous) git command",
+    "date": "Feb. 23rd, 2022",
     "alt": "image alt",
-    "excerpt": "This is my very first blog post. It's pretty cool amirite?",
+    "excerpt": "One super handy command that I've come to love is something that was recommended to me...",
     "thumbnail": "/thumbnails/lulz.jpg",
-    "slug": "test"
+    "slug": "git-reco"
   },
   {
     "title": "First blog post",
-    "date": "Jan. 31st, 2022",
+    "date": "Feb. 21st, 2022",
     "alt": "image alt",
-    "excerpt": "This is my very first blog post. It's pretty cool amirite?",
+    "excerpt": "I used to have a wordpress blog some time ago but then decided to build one myself...",
     "thumbnail": "/thumbnails/lulz.jpg",
-    "slug": "test"
+    "slug": "first"
   }
 ]
