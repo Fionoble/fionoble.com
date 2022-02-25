@@ -1,22 +1,16 @@
-import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown';
-import Image from 'next/image';
+import matter from 'gray-matter'
+import ReactMarkdown from 'react-markdown'
+import MarkdownComponents from '../../components/MarkdownComponents'
 
-const MarkdownComponents: object = {
-  img: image => {
-    return (
-      <Image
-        src={image.properties.src}
-        alt={image.properties.alt}
-        height="768"
-        width="432"
-      />
-    )
-  },
+type PostProps = {
+  data: {
+    title: string;
+  }
+  content: string;
 }
 
-function PostPage({data, content}) {
-  const {title} = data;
+function PostPage({data, content}: PostProps) {
+  const {title} = data
 
   return (
     <>
@@ -27,10 +21,10 @@ function PostPage({data, content}) {
 }
 
 PostPage.getInitialProps = async (context) => {
-  const { slug } = context.query;
-  const content = await import(`../../content/blog/${slug}.md`);
-  const data = matter(content.default);
-  return { ...data };
+  const { slug } = context.query
+  const content = await import(`../../content/blog/${slug}.md`)
+  const data = matter(content.default)
+  return { ...data }
 }
 
-export default PostPage;
+export default PostPage

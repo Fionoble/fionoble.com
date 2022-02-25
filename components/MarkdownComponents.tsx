@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import styled, {css} from 'styled-components';
+import Image from 'next/image'
+import styled, {css} from 'styled-components'
 
 const CenteredWrapper = styled.div`
   display: block;
@@ -10,15 +10,24 @@ const CenteredWrapper = styled.div`
       width: ${props.width}px;
     `)
   }}
-`;
+`
 
-const NextImage = ({image}) => {
-  const alt = image.properties.alt?.replace(/ *\{[^)]*\} */g, "")
+type NextImageForMarkdownProps = {
+  image: {
+    properties: {
+      alt: string;
+      src: string;
+    }
+  }
+}
+
+const NextImage = ({image}: NextImageForMarkdownProps) => {
+  const alt = image.properties.alt?.replace(/ *\{[^)]*\} */g, '')
   const isPriority = image.properties.alt?.toLowerCase().includes('{priority}')
   const metaWidth = image.properties.alt.match(/{([^}]+)x/)
   const metaHeight = image.properties.alt.match(/x([^}]+)}/)
-  const width = metaWidth ? metaWidth[1] : "768"
-  const height = metaHeight ? metaHeight[1] : "432"
+  const width = metaWidth ? metaWidth[1] : '768'
+  const height = metaHeight ? metaHeight[1] : '432'
   
   return (
     <CenteredWrapper width={width}>
@@ -31,14 +40,14 @@ const NextImage = ({image}) => {
         priority={isPriority}
       />
     </CenteredWrapper>
-  );
+  )
 }
 
 const MarkdownComponents: object = {
   p: paragraph => {
     const { node } = paragraph
     
-    if (node.children[0].tagName === "img") {
+    if (node.children[0].tagName === 'img') {
       const image = node.children[0]
       return <NextImage image={image}/>
     }
@@ -49,4 +58,4 @@ const MarkdownComponents: object = {
   },
 }
 
-export default MarkdownComponents;
+export default MarkdownComponents

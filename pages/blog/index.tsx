@@ -1,20 +1,33 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 import {
   PostPreviewContainer, 
   PostPreviewCard, 
   Title, 
   TimeStamp, 
   ImageWrapper
-} from '../../components/blog';
+} from '../../components/blog'
 
-function PostPage({data}) {
+type PostMetaItem = {
+  title: string;
+  date: string;
+  alt: string;
+  excerpt: string;
+  thumbnail: string;
+  slug: string;
+}
+
+type PostPageProps = {
+  data: PostMetaItem[];
+}
+
+function PostPage({data}: PostPageProps) {
   // TODO Create shared components
   return (
     <>
       <PostPreviewContainer>
         {data.map(((post, index) => {
-          const slightRandomRotation = `${index % 2 == 0 ? '-' : ''}${(Math.random() * 2)}`;
+          const slightRandomRotation = `${index % 2 == 0 ? '-' : ''}${(Math.random() * 2)}`
           return (
             <Link href={`/blog/${post.slug}`} key={index} passHref>
               <PostPreviewCard rotation={slightRandomRotation}>
@@ -34,9 +47,9 @@ function PostPage({data}) {
 }
 
 PostPage.getInitialProps = async () => {
-  const content = await import(`../../content/blog/index.json`);
-  const data = content.default;
-  return { data };
+  const content = await import('../../content/blog/index.json')
+  const data = content.default
+  return { data }
 }
 
-export default PostPage;
+export default PostPage

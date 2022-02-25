@@ -1,9 +1,9 @@
-import styled, {ThemeProvider, createGlobalStyle} from 'styled-components';
-import {useParallax} from 'react-scroll-parallax';
-import Navigation from './Navigation';
-import Footer from './Footer';
+import {FC} from 'react'
+import styled, {ThemeProvider, createGlobalStyle} from 'styled-components'
+import Navigation from './Navigation'
+import Footer from './Footer'
 
-const theme = {};
+const theme = {}
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   #__next{
     height: 100%;
   }
-`;
+`
 
 const Content = styled.div`
   width: 100%;
@@ -46,15 +46,15 @@ const Content = styled.div`
   h1 {
     font-size: 20px;
   }
-`;
+`
 
 const AppContainerStyles = styled.div`
   margin: 0 auto;
   max-width: 1100px;
   background: rgba(255, 255, 255, 0.9);
-`;
+`
 
-function Page(props) {
+const Page:FC =  (props) => {
   return (
     <ThemeProvider theme={theme}>
       <>
@@ -68,7 +68,7 @@ function Page(props) {
         </AppContainerStyles>
       </>
     </ThemeProvider>
-  );
+  )
 }
 
-export default Page;
+export default Page

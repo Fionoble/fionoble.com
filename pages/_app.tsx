@@ -1,10 +1,10 @@
-import App from 'next/app';
-import Page  from '../components/foundation/Page';
+import App from 'next/app'
+import Page  from '../components/foundation/Page'
 import '../styles/markdown.css'
 
 class AppPage extends App {
   render() {
-    const {Component, pageProps} = this.props;
+    const {Component, pageProps} = this.props
 
     return (
       <Page>
@@ -19,4 +19,4 @@ AppPage.getInitialProps = async (appContext) => {
   return { ...appProps }
 }
 
-export default AppPage ;
+export default AppPage 

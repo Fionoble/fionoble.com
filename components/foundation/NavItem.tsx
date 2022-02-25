@@ -1,7 +1,8 @@
-import styled, {css} from 'styled-components';
-import Link from 'next/link';
-import Image from 'next/image';
-import useWindowSize from '../../utils/useWindowSize';
+import {FC} from 'react'
+import styled, {css} from 'styled-components'
+import Link from 'next/link'
+import Image from 'next/image'
+import useWindowSize from '../../utils/useWindowSize'
 
 const StyledNavItem = styled.li`
   margin: 0 10px 0 0;
@@ -24,8 +25,8 @@ const StyledNavItem = styled.li`
       return (css`
         height: 70px;
       `)}
-    }
   }
+}
 
   .nav-item-title {
     width: 100%;
@@ -84,29 +85,44 @@ const StyledNavItem = styled.li`
       transition: background-color 0.1s ease-out;
     }
   }
-`;
+`
 
 const NavIconWrapper = styled.div`
   margin: 0 auto;
-`;
+`
 
-const NavIcon = (props: {iconUrl: string}) =>  (
+type NavIconProps = {
+  iconUrl: string;
+  alt: string;
+};
+
+const NavIcon = (props: NavIconProps) =>  (
   <NavIconWrapper>
     <Image 
       width="40"
       height="40"
       src={props.iconUrl}
+      alt={props.alt}
     />
   </NavIconWrapper>
 )
 
-const NavItem = (props) => {
+type NavItemProps = {
+  icon: string;
+  label: string;
+  link: string;
+  miniNav: boolean;
+  external?: boolean;
+  image?: string;
+}
+
+const NavItem: FC<NavItemProps>  = (props) => {
   // TODO - Make an onclick and programmatically send them to the external links
-  const {icon, label, link, external, miniNav} = props;
-  const screen = useWindowSize();
+  const {icon, label, link, external, miniNav} = props
+  const screen = useWindowSize()
 
   const content = (screen.width && screen.width < 601 ? 
-    <NavIcon iconUrl={icon} /> : label)
+    <NavIcon iconUrl={icon} alt={label} /> : label)
 
   if(external) return (
     <StyledNavItem miniNav={miniNav}>
@@ -116,7 +132,7 @@ const NavItem = (props) => {
         </div>
       </a>
     </StyledNavItem>
-  );
+  )
  
 
   return (
@@ -128,6 +144,6 @@ const NavItem = (props) => {
       </StyledNavItem>
     </Link>
   )
-};
+}
 
-export default NavItem;
+export default NavItem

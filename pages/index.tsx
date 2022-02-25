@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import Image from 'next/image';
+import {FC} from 'react'
+import styled from 'styled-components'
+import Image from 'next/image'
 
 const ImageLayout = styled.div`
   @media only screen and (min-width: 520px) {
@@ -12,21 +13,21 @@ const ImageLayout = styled.div`
     display: block;
     width: 240px;
   }
-`;
+`
 
-const MainContent = styled.p``;
+const MainContent = styled.p``
 const SocialWrapper = styled.div`
   @media only screen and (max-width: 640px) {
     clear: both;
     width: 100%;
   }
-`;
+`
 
 const ConnectListWrapper = styled.ul`
   @media only screen and (max-width: 640px) {
     padding-left: 0;
   }
-`;
+`
 
 
 const ConnectLinkStyled = styled.li`
@@ -47,32 +48,31 @@ const ConnectLinkStyled = styled.li`
   :hover {
     padding-left: 15px;
   }
-`;
+`
 
-type ConnectLinkProps = {
+type ConnectLink = {
   imgSrc: string;
   mediaLink: string;
-  children: string;
 };
 
-const ConnectLink = (props: ConnectLinkProps) => {
-  const {imgSrc, mediaLink, children} = props;
-  const iconSize = 26;
+const ConnectLink: FC<ConnectLink> = (props) => {
+  const {imgSrc, mediaLink, children} = props
+  const iconSize = 26
 
   return (
     <a href={mediaLink} target="_blank" rel="noreferrer">
       <ConnectLinkStyled>
-        <Image src={imgSrc} width={iconSize} height={iconSize} />
+        <Image src={imgSrc} width={iconSize} height={iconSize} alt={String(children)} />
         <div>{children}</div>
       </ConnectLinkStyled>
     </a>
-  );
+  )
 }
 
 function Home() {
   return (
     <>
-      <h1>{`Welcome to my little corner of the internet!`}</h1>
+      <h1>{'Welcome to my little corner of the internet!'}</h1>
       <ImageLayout>
         <Image 
           src="/welcome_wave.jpg"
@@ -88,7 +88,7 @@ function Home() {
         I have a ton of hobbies (more so since COVID) and this was the best way I could think of to share them.`}
       </MainContent>
       <SocialWrapper>
-        <h3>{`If you're interested in getting in touch:`}</h3>
+        <h3>{'If you\'re interested in getting in touch:'}</h3>
         <ConnectListWrapper>
           <ConnectLink 
             imgSrc="/icons/linkedin.png" 
@@ -108,7 +108,7 @@ function Home() {
         </ConnectListWrapper>
       </SocialWrapper>
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home

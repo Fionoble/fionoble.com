@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import styled, {css} from 'styled-components';
-import NavItem from './NavItem';
+import { useState, useEffect } from 'react'
+import styled from 'styled-components'
+import NavItem from './NavItem'
 
 const StyledNav = styled.ul`
   margin: 0 auto;
@@ -16,24 +16,24 @@ const StyledNav = styled.ul`
   right: 0;
   max-width: 1100px;
   z-index: 10;
-`;
+`
 
 const Navigation = () => { 
-  const [scrollY, setScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    handleScroll();
+      setScrollY(window.scrollY)
+    }
+    handleScroll()
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
-  const isMiniNav = scrollY > 100;
+  const isMiniNav = scrollY > 100
 
   return (
     <StyledNav>
@@ -68,6 +68,6 @@ const Navigation = () => {
       />
     </StyledNav>
   )
-};
+}
 
-export default Navigation;
+export default Navigation

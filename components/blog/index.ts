@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, {css} from 'styled-components'
 
 export const PostPreviewCard = styled.div`
   margin: 20px;
@@ -22,26 +22,26 @@ export const PostPreviewCard = styled.div`
         transform: rotate(${props.rotation}deg) translateY(5px); 
       }
     `)}
-  }
+}
 
-`;
+`
 
 export const Title = styled.div`
   font-size: 18px;
   font-weight: 900;
-`;
+`
 export const TimeStamp = styled.div`
   font-size: 11px;
   font-weight: 900;
-`;
+`
 
 export const ImageWrapper = styled.div`
   line-height: 0;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
-`;
+`
 
 export const PostPreviewContainer = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-`;
+`
