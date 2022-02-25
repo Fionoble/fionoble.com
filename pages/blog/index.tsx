@@ -34,7 +34,7 @@ function PostPage({data}: PostPageProps) {
                 <Title>{post.title}</Title>
                 <TimeStamp>{post.date}</TimeStamp>
                 <ImageWrapper>
-                  <Image src={post.thumbnail} layout="fixed" width="280" height="100" alt={post.alt} />
+                  <Image src={decodeURI(post.thumbnail)} layout="fixed" width="280" height="100" alt={post.alt} />
                 </ImageWrapper>
                 <div>{post.excerpt}</div>
               </PostPreviewCard>

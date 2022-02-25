@@ -1,16 +1,4 @@
 import Image from 'next/image'
-import styled, {css} from 'styled-components'
-
-const CenteredWrapper = styled.div`
-  display: block;
-  margin: 0 auto;
-  
-  ${props => {
-    return (css`
-      width: ${props.width}px;
-    `)
-  }}
-`
 
 type NextImageForMarkdownProps = {
   image: {
@@ -30,16 +18,19 @@ const NextImage = ({image}: NextImageForMarkdownProps) => {
   const height = metaHeight ? metaHeight[1] : '432'
   
   return (
-    <CenteredWrapper width={width}>
-      <Image
-        src={image.properties.src}
-        width={width}
-        height={height}
-        className="postImg"
-        alt={alt}
-        priority={isPriority}
-      />
-    </CenteredWrapper>
+    <>
+      <div style={{ display: 'flex',
+        justifyContent: 'center',}}>
+        <Image
+          src={image.properties.src}
+          width={width}
+          height={height}
+          className="postImg"
+          alt={alt}
+          priority={isPriority}
+        />
+      </div>
+    </>
   )
 }
 
