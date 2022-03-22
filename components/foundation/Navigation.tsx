@@ -53,7 +53,7 @@ const Navigation = () => {
       />
       <NavItem 
         link="/side-projects" 
-        label="Side Projects" 
+        label="Projects" 
         icon="/nav/side-projects.png" 
         image=""
         miniNav={isMiniNav}

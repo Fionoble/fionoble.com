@@ -1,5 +1,13 @@
 [
   {
+    "title": "Skate season is upon us!",
+    "date": "Mar. 7th, 2022",
+    "alt": "image alt",
+    "excerpt": "\"Skate season is upon us!\" he said while a mix of rain and snow came down outside his house...",
+    "thumbnail": "/thumbnails/skate-season.jpg",
+    "slug": "skate-season"
+  },
+  {
     "title": "Super handy (but aso dangerous) git command",
     "date": "Feb. 23rd, 2022",
     "alt": "image alt",
