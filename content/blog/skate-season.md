@@ -12,8 +12,10 @@ Yesterday, the temperature was about 13 degress celcius and it was gorgeous. It 
 
 This got me super hyped for (more consistent)nicer weather so I can hop ack on my board and learn new tricks! I actually ended up throwing downa couple of tricks in the garage, but then got super tired 😅
 
-I actually took a video of a bunch of the tricks I had by the end of the season last year! [Here's it is!](https://drive.google.com/file/d/1yZDVWOS5rB8LxQ17-lLFoPHBkNK_JInW/view?usp=sharing)
+I actually took a video of a bunch of the tricks I had by the end of the season last year! [Here's it is!](https://youtu.be/F4apScOVlQo)
 
 I also discovered a new skatepark near my house. It's tiny but that's kinda why I like it! Some videos of that spot coming soon. 
 
 I'll throw together a list of tricks I have and want to learn just to share (and for me to keep track of, I'm the only one on this blog anyway 🙃
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F4apScOVlQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
