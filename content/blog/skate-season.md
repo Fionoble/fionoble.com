@@ -18,4 +18,4 @@ I also discovered a new skatepark near my house. It's tiny but that's kinda why 
 
 I'll throw together a list of tricks I have and want to learn just to share (and for me to keep track of, I'm the only one on this blog anyway 🙃
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F4apScOVlQo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![YouTube video player {560x315}{video}](https://www.youtube.com/embed/F4apScOVlQo)
