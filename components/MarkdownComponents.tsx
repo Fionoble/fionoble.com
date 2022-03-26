@@ -17,12 +17,12 @@ const NextImage = ({image}: NextImageForMarkdownProps) => {
   const metaHeight = image.properties.alt.match(/x([^}]+)}/)
   const width = metaWidth ? metaWidth[1] : '768'
   const height = metaHeight ? metaHeight[1] : '432'
-  const src = image.properties.src;
+  const src = image.properties.src
 
   if(isVideo){
     return (
       <div style={{ display: 'flex',
-      justifyContent: 'center',}}>
+        justifyContent: 'center',}}>
         <iframe 
           width={width} 
           height={height}

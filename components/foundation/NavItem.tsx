@@ -18,7 +18,6 @@ const StyledNavItem = styled.li`
   cursor: pointer;
   transition: height 0.1s;
 
-
   ${props => {
     if(props.miniNav) {
 
@@ -28,19 +27,34 @@ const StyledNavItem = styled.li`
   }
 }
 
+  
   .nav-item-title {
     width: 100%;
     text-align: center;
     position: absolute;
+    font-weight: 800;
     bottom: 5px;
     font-size: 24px;
     color: #000;
+    z-index: 2;
   }
 
   &:last-child{
     margin: 0;
   }
 
+    ${props => {
+    if(props.bgImage) {
+  
+      return (css`
+          background-image: url(${props.bgImage});
+          background-position: center; /* Center the image */
+          background-repeat: no-repeat; /* Do not repeat the image */
+          background-size: cover;
+        `)}
+  }
+}  
+  
   @media only screen and (max-width: 800px) {
     &:hover {
       height: 230px;
@@ -68,6 +82,7 @@ const StyledNavItem = styled.li`
 
   // Mobile
   @media only screen and (max-width: 600px) {
+    background-image: none;
     height: 50px;
     margin: 0;
 
@@ -85,6 +100,12 @@ const StyledNavItem = styled.li`
       transition: background-color 0.1s ease-out;
     }
   }
+`
+const WhiteOverlay = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.8);
+  z-index: 1;
 `
 
 const NavIconWrapper = styled.div`
@@ -118,29 +139,31 @@ type NavItemProps = {
 
 const NavItem: FC<NavItemProps>  = (props) => {
   // TODO - Make an onclick and programmatically send them to the external links
-  const {icon, label, link, external, miniNav} = props
+  const {icon, label, link, external, miniNav, image} = props
   const screen = useWindowSize()
 
   const content = (screen.width && screen.width < 601 ? 
     <NavIcon iconUrl={icon} alt={label} /> : label)
 
   if(external) return (
-    <StyledNavItem miniNav={miniNav}>
+    <StyledNavItem miniNav={miniNav} bgImage={image}>
       <a href={link} target="_blank" rel="noreferrer">
         <div className="nav-item-title">
           {content}
         </div>
       </a>
+      <WhiteOverlay />
     </StyledNavItem>
   )
  
 
   return (
     <Link href={link} passHref>
-      <StyledNavItem miniNav={miniNav}>
+      <StyledNavItem miniNav={miniNav} bgImage={image}>
         <div className="nav-item-title">
           {content}
         </div>
+        <WhiteOverlay />
       </StyledNavItem>
     </Link>
   )

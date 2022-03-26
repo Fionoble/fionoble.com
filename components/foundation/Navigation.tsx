@@ -41,21 +41,21 @@ const Navigation = () => {
         link="/" 
         label="About Me" 
         icon="/nav/about-me.png" 
-        image=""
+        image="/nav/top-bar/about-me.png"
         miniNav={isMiniNav}
       />
       <NavItem 
         link="/blog" 
         label="Blog" 
         icon="/nav/blog.png"
-        image=""
+        image="/nav/top-bar/blog.png"
         miniNav={isMiniNav}
       />
       <NavItem 
         link="/side-projects" 
         label="Projects" 
-        icon="/nav/side-projects.png" 
-        image=""
+        icon="/nav/projects.png" 
+        image="/nav/top-bar/project.png"
         miniNav={isMiniNav}
       />
       <NavItem 
@@ -63,7 +63,7 @@ const Navigation = () => {
         external 
         label="Shop" 
         icon="/nav/shop.png" 
-        image=""
+        image="/nav/top-bar/shop.png"
         miniNav={isMiniNav}
       />
     </StyledNav>
