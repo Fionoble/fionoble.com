@@ -82,7 +82,6 @@ const StyledNavItem = styled.li`
 
   // Mobile
   @media only screen and (max-width: 600px) {
-    background-image: none;
     height: 50px;
     margin: 0;
 
@@ -141,12 +140,14 @@ const NavItem: FC<NavItemProps>  = (props) => {
   // TODO - Make an onclick and programmatically send them to the external links
   const {icon, label, link, external, miniNav, image} = props
   const screen = useWindowSize()
+  const isCondensed = screen.width && screen.width < 601
+  const bgImage = isCondensed ? null : image 
 
-  const content = (screen.width && screen.width < 601 ? 
+  const content = (isCondensed ? 
     <NavIcon iconUrl={icon} alt={label} /> : label)
 
   if(external) return (
-    <StyledNavItem miniNav={miniNav} bgImage={image}>
+    <StyledNavItem miniNav={miniNav} bgImage={bgImage}>
       <a href={link} target="_blank" rel="noreferrer">
         <div className="nav-item-title">
           {content}
@@ -159,7 +160,7 @@ const NavItem: FC<NavItemProps>  = (props) => {
 
   return (
     <Link href={link} passHref>
-      <StyledNavItem miniNav={miniNav} bgImage={image}>
+      <StyledNavItem miniNav={miniNav} bgImage={bgImage}>
         <div className="nav-item-title">
           {content}
         </div>
