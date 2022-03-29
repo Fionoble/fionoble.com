@@ -1,4 +1,8 @@
 import Image from 'next/image'
+// SyntaxHighlight.tsx
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { oneDark as SyntaxStyle } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+
 
 type NextImageForMarkdownProps = {
   image: {
@@ -66,6 +70,21 @@ const MarkdownComponents: object = {
   img: image => {
     return <NextImage image={image}/>
   },
+  code({inline, className,...props}) {
+    // Set code language declared in code block: ```lang
+    const match = /language-(\w+)/.exec(className || '')
+    return !inline && match ? (
+      <SyntaxHighlighter
+        style={SyntaxStyle}
+        language={match[1]}
+        PreTag="div"
+        className="codeStyle"
+        {...props}
+      />
+    ) : (
+      <code className={className} {...props} />
+    )
+  }
 }
 
 export default MarkdownComponents

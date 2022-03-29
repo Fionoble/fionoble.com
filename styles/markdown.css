@@ -291,10 +291,6 @@
     background: #f6f8fa !important;
   }
   
-  .markdown-body pre > div code, pre > div code span{
-    background: #f6f8fa !important;
-  }
-  
   .markdown-body input::-webkit-inner-spin-button,
   .markdown-body input::-webkit-outer-spin-button {
     margin: 0;
