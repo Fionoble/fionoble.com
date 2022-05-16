@@ -18,6 +18,10 @@ const StyledNavItem = styled.li`
   cursor: pointer;
   transition: height 0.1s;
 
+  a {
+
+  }
+
   ${props => {
     if(props.miniNav) {
 
@@ -147,12 +151,10 @@ const NavItem: FC<NavItemProps>  = (props) => {
     <NavIcon iconUrl={icon} alt={label} /> : label)
 
   if(external) return (
-    <StyledNavItem miniNav={miniNav} bgImage={bgImage}>
-      <a href={link} target="_blank" rel="noreferrer">
-        <div className="nav-item-title">
-          {content}
-        </div>
-      </a>
+    <StyledNavItem miniNav={miniNav} bgImage={bgImage} onClick={() => window.open(link, '_blank')}>
+      <div className="nav-item-title">
+        {content}
+      </div>
       <WhiteOverlay />
     </StyledNavItem>
   )
