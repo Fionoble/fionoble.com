@@ -6,5 +6,13 @@
     "excerpt": "It felt appropriate the the first project I post about be this site.",
     "thumbnail": "/thumbnails/website.png",
     "slug": "fionoble-com"
+  },
+  {
+    "title": "My Shopify Store",
+    "date": "July. 29th, 2022",
+    "alt": "Store Thumbnail",
+    "excerpt": "I'm a Shopify employee, and like any good company, it's strong encouraged to use the platform we build...",
+    "thumbnail": "/thumbnails/shopify-store.png",
+    "slug": "shopify-store"
   }
 ]

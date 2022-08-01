@@ -42,8 +42,10 @@ const NextImage = ({image}: NextImageForMarkdownProps) => {
   
   return (
     <>
-      <div style={{ display: 'flex',
-        justifyContent: 'center',}}>
+      <div style={{ 
+        display: 'flex',
+        justifyContent: 'center',
+      }}>
         <Image
           src={src}
           width={width}
