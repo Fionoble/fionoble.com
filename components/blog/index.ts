@@ -45,3 +45,5 @@ export const PostPreviewContainer = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
 `
+
+export * from './Filter'

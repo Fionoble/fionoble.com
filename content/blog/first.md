@@ -4,4 +4,4 @@ date: ''
 ---
 
 
-Welp... not really much else to see here. Can cross this off my checkist! 
+Welp... not really much else to see here. Can cross this off my checklist! 

@@ -1,11 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import {useRouter} from 'next/router'
 import {
   PostPreviewContainer, 
   PostPreviewCard, 
   Title, 
   TimeStamp, 
-  ImageWrapper
+  ImageWrapper,
+  Filter
 } from '../../components/blog'
 
 type PostMetaItem = {
@@ -15,16 +17,28 @@ type PostMetaItem = {
   excerpt: string;
   thumbnail: string;
   slug: string;
+  tags: string[];
 }
 
 type PostPageProps = {
   data: PostMetaItem[];
+  filters: string[];
 }
 
-function PostPage({data}: PostPageProps) {
+function PostPage({data, filters}: PostPageProps) {
   // TODO Create shared components
+  const router = useRouter()
+  const setNewFilter = (filter:string) => {
+    if(filter) router.query.filter = filter
+    else delete router.query.filter
+    router.push(router)
+  }
+
   return (
     <>
+      <h1>{'Blog'}</h1>
+      <Filter filters={filters} onFilterSelect={setNewFilter} initialFilter={router.query.filter} />
+      <p>{'Just a place where I dump some of my thoughts, experiences and some cool things I learn.'}</p>
       <PostPreviewContainer>
         {data.map(((post, index) => {
           const slightRandomRotation = `${index % 2 == 0 ? '-' : ''}${(Math.random() * 2)}`
@@ -46,10 +60,18 @@ function PostPage({data}: PostPageProps) {
   )
 }
 
-PostPage.getInitialProps = async () => {
+PostPage.getInitialProps = async (context) => {
   const content = await import('../../content/blog/index.json')
+  const activeFilter = context.query.filter
   const data = content.default
-  return { data }
+  const filters = data.reduce((p, c) => ([...p, ...c.tags]), [])
+  const filteredData = activeFilter ? 
+    data.filter((postData) => postData.tags.includes(activeFilter))
+    : data
+  return { 
+    data: filteredData,
+    filters: [...new Set<string>(filters)]
+  }
 }
 
 export default PostPage

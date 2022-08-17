@@ -5,7 +5,10 @@
     "alt": "image alt",
     "excerpt": "It was my son's last day of school a few weeks ago. He was just finishing up...",
     "thumbnail": "/thumbnails/last-day-of-school.jpg",
-    "slug": "last-day-of-school"
+    "slug": "last-day-of-school",
+    "tags": [
+      "Parenting"
+    ]
   },
   {
     "title": "So I finally got the COVIDz",
@@ -13,7 +16,10 @@
     "alt": "image alt",
     "excerpt": "I'm lucky that it was the later more milder variant that we ended up getting but it still wasn't...",
     "thumbnail": "/thumbnails/covidz.jpg",
-    "slug": "covidz"
+    "slug": "covidz",
+    "tags": [
+      "Parenting"
+    ]
   },
   {
     "title": "Hacky youtube in markdown",
@@ -21,7 +27,10 @@
     "alt": "image alt",
     "excerpt": "I'm super lazy and decided to implement a scrappy youtube video parser in my MD blog implementation...",
     "thumbnail": "/thumbnails/hacky-youtube.jpg",
-    "slug": "hacky-youtube-in-md"
+    "slug": "hacky-youtube-in-md",
+    "tags": [
+      "Code"
+    ]
   },
   {
     "title": "Skate season is upon us!",
@@ -29,7 +38,10 @@
     "alt": "image alt",
     "excerpt": "\"Skate season is upon us!\" he said while a mix of rain and snow came down outside his house...",
     "thumbnail": "/thumbnails/skate-season.jpg",
-    "slug": "skate-season"
+    "slug": "skate-season",
+    "tags": [
+      "Hobbies"
+    ]
   },
   {
     "title": "Super handy (but also dangerous) git command",
@@ -37,7 +49,10 @@
     "alt": "image alt",
     "excerpt": "One super handy command that I've come to love is something that was recommended to me...",
     "thumbnail": "/thumbnails/git-reco.png",
-    "slug": "git-reco"
+    "slug": "git-reco",
+    "tags": [
+      "Code"
+    ]
   },
   {
     "title": "First blog post",
@@ -45,6 +60,7 @@
     "alt": "image alt",
     "excerpt": "I used to have a wordpress blog some time ago but then decided to build one myself...",
     "thumbnail": "/thumbnails/first.png",
-    "slug": "first"
+    "slug": "first",
+    "tags": []
   }
 ]
