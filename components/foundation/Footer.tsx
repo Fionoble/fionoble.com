@@ -81,6 +81,11 @@ function Footer() {
           alt="instagram"
           mediaLink="https://www.instagram.com/fionoble/"
         />
+        <ConnectLink 
+          imgSrc="/icons/twitter.png" 
+          alt="twitter"
+          mediaLink="https://www.twitter.com/fionoble/"
+        />
       </FollowMeWrapper>
     </FooterContainer>
   )

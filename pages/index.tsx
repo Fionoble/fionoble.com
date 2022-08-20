@@ -105,6 +105,11 @@ function Home() {
             mediaLink="https://www.instagram.com/fionoble/">
               Instagram
           </ConnectLink>
+          <ConnectLink 
+            imgSrc="/icons/twitter.png" 
+            mediaLink="https://www.twitter.com/fionoble/">
+              Twitter
+          </ConnectLink>
         </ConnectListWrapper>
       </SocialWrapper>
     </>
