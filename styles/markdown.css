@@ -1,5 +1,6 @@
 .postImg {
   border: 2px solid black !important;
+  pointer-events: none;
 }
 
 .markdown-body .octicon {

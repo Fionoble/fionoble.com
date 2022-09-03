@@ -1,5 +1,16 @@
 [
   {
+    "title": "First family cottage trip",
+    "date": "August 19th, 2022",
+    "alt": "image alt",
+    "excerpt": "Last week my family and I took a week and went North to a cottage we rented. Well, more of a...",
+    "thumbnail": "/thumbnails/cottage-trip.jpg",
+    "slug": "cottage-trip",
+    "tags": [
+      "Parenting"
+    ]
+  },
+  {
     "title": "Last day of school",
     "date": "June 30th, 2022",
     "alt": "image alt",
