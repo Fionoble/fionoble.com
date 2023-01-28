@@ -15,11 +15,15 @@ We started that event off with a couple of fairly nervous children who weren't w
 
 After the first few times the kids really started opening up to the park and wanting to explore a little more. We found a playground with some slides and then convinced the kids to go on the train that goes around the whole park. The kids really enjoyed that. We also went on a couple of merry-go-rounds. 
 
+![Santa's Village{512x512}](/blog/santas-village.png)
+
 We took a break in the middle there and went to go get ice cream. When we asked for 2 kiddie scoops we got two tubs of ice cream... When I asked for a single scoop I received a vat of ice cream... soooo much ice cream! However, no one was really complaining, except for my wife (L) who was mostly cold on that cloudy day.
 
 ### Kayaking
 
 Another thing that was a first for all of us except for L. The first time we went we tried to take the whole family. 2 adults and 2 kids in a tandem kayak. We somehow managed to figure it out but Jet got super nervous and pretty much wailed the entire time we were on the water so that trip didn't last very long. 
+
+![Kayak{1020x600}](/blog/kayak.png)
 
 I tried to go myself later to actually try it out and the water made me CRAZY nervous. I didn't feel any of that when I was out with the kids. My theory is that I was focused on making sure the kids enjoyed it. But now that I was out on my own... I was seeing the water and feeling all the anxiety (which I'm sure Jet was also feeling). That was the first attempt and I didn't end up going too far. 
 

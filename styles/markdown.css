@@ -3,6 +3,10 @@
   pointer-events: none;
 }
 
+.Popover{
+  z-index: 10;
+}
+
 .markdown-body .octicon {
     display: inline-block;
     fill: currentColor;
