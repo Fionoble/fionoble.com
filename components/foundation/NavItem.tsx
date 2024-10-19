@@ -1,37 +1,35 @@
-import {FC} from 'react'
-import styled, {css} from 'styled-components'
-import Link from 'next/link'
-import Image from 'next/image'
-import useWindowSize from '../../utils/useWindowSize'
+import { FC } from "react";
+import styled, { css } from "styled-components";
+import Link from "next/link";
+import Image from "next/image";
+import useWindowSize from "../../utils/useWindowSize";
 
 const StyledNavItem = styled.li`
   margin: 0 10px 0 0;
   padding: 0;
   height: 200px;
+  width: 460px;
   background-color: #fff;
   position: relative;
   flex: 1;
   list-style-type: none;
   border: 3px black solid;
   border-top: 0px;
-  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: height 0.1s;
 
   a {
-
   }
 
-  ${props => {
-    if(props.miniNav) {
-
-      return (css`
+  ${(props) => {
+    if (props.miniNav) {
+      return css`
         height: 70px;
-      `)}
-  }
-}
+      `;
+    }
+  }}
 
-  
   .nav-item-title {
     width: 100%;
     text-align: center;
@@ -43,22 +41,21 @@ const StyledNavItem = styled.li`
     z-index: 2;
   }
 
-  &:last-child{
+  &:last-child {
     margin: 0;
   }
 
-    ${props => {
-    if(props.bgImage) {
-  
-      return (css`
-          background-image: url(${props.bgImage});
-          background-position: center; /* Center the image */
-          background-repeat: no-repeat; /* Do not repeat the image */
-          background-size: cover;
-        `)}
-  }
-}  
-  
+  ${(props) => {
+    if (props.bgImage) {
+      return css`
+        background-image: url(${props.bgImage});
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
+      `;
+    }
+  }}
+
   @media only screen and (max-width: 800px) {
     &:hover {
       height: 230px;
@@ -103,33 +100,28 @@ const StyledNavItem = styled.li`
       transition: background-color 0.1s ease-out;
     }
   }
-`
+`;
 const WhiteOverlay = styled.div`
   width: 100%;
   height: 100%;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   z-index: 1;
-`
+`;
 
 const NavIconWrapper = styled.div`
   margin: 0 auto;
-`
+`;
 
 type NavIconProps = {
   iconUrl: string;
   alt: string;
 };
 
-const NavIcon = (props: NavIconProps) =>  (
+const NavIcon = (props: NavIconProps) => (
   <NavIconWrapper>
-    <Image 
-      width="40"
-      height="40"
-      src={props.iconUrl}
-      alt={props.alt}
-    />
+    <Image width="40" height="40" src={props.iconUrl} alt={props.alt} />
   </NavIconWrapper>
-)
+);
 
 type NavItemProps = {
   icon: string;
@@ -138,38 +130,37 @@ type NavItemProps = {
   miniNav: boolean;
   external?: boolean;
   image?: string;
-}
+};
 
-const NavItem: FC<NavItemProps>  = (props) => {
+const NavItem: FC<NavItemProps> = (props) => {
   // TODO - Make an onclick and programmatically send them to the external links
-  const {icon, label, link, external, miniNav, image} = props
-  const screen = useWindowSize()
-  const isCondensed = screen.width && screen.width < 601
-  const bgImage = isCondensed ? null : image 
+  const { icon, label, link, external, miniNav, image } = props;
+  const screen = useWindowSize();
+  const isCondensed = screen.width && screen.width < 601;
+  const bgImage = isCondensed ? null : image;
 
-  const content = (isCondensed ? 
-    <NavIcon iconUrl={icon} alt={label} /> : label)
+  const content = isCondensed ? <NavIcon iconUrl={icon} alt={label} /> : label;
 
-  if(external) return (
-    <StyledNavItem miniNav={miniNav} bgImage={bgImage} onClick={() => window.open(link, '_blank')}>
-      <div className="nav-item-title">
-        {content}
-      </div>
-      <WhiteOverlay />
-    </StyledNavItem>
-  )
- 
+  if (external)
+    return (
+      <StyledNavItem
+        miniNav={miniNav}
+        bgImage={bgImage}
+        onClick={() => window.open(link, "_blank")}
+      >
+        <div className="nav-item-title">{content}</div>
+        <WhiteOverlay />
+      </StyledNavItem>
+    );
 
   return (
     <Link href={link} passHref>
       <StyledNavItem miniNav={miniNav} bgImage={bgImage}>
-        <div className="nav-item-title">
-          {content}
-        </div>
+        <div className="nav-item-title">{content}</div>
         <WhiteOverlay />
       </StyledNavItem>
     </Link>
-  )
-}
+  );
+};
 
-export default NavItem
+export default NavItem;
