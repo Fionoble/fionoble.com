@@ -8,7 +8,6 @@ const StyledNavItem = styled.li`
   margin: 0 10px 0 0;
   padding: 0;
   height: 200px;
-  width: 460px;
   background-color: #fff;
   position: relative;
   flex: 1;
@@ -18,9 +17,6 @@ const StyledNavItem = styled.li`
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: height 0.1s;
-
-  a {
-  }
 
   ${(props) => {
     if (props.miniNav) {
@@ -141,21 +137,27 @@ const NavItem: FC<NavItemProps> = (props) => {
 
   const content = isCondensed ? <NavIcon iconUrl={icon} alt={label} /> : label;
 
-  if (external)
-    return (
+  // if (external)
+  //   return (
+  //     <StyledNavItem
+  //       miniNav={miniNav}
+  //       bgImage={bgImage}
+  //       onClick={() => window.open(link, "_blank")}
+  //     >
+//       <div className="nav-item-title">{content}</div>
+  //       <WhiteOverlay />
+  //     </StyledNavItem>
+  //   );
+
+  return (
+    <Link href={external ? '#' : link} passHref>
       <StyledNavItem
         miniNav={miniNav}
         bgImage={bgImage}
-        onClick={() => window.open(link, "_blank")}
+        onClick={() => {
+          if (external) window.open(link, '_blank')
+        }}
       >
-        <div className="nav-item-title">{content}</div>
-        <WhiteOverlay />
-      </StyledNavItem>
-    );
-
-  return (
-    <Link href={link} passHref>
-      <StyledNavItem miniNav={miniNav} bgImage={bgImage}>
         <div className="nav-item-title">{content}</div>
         <WhiteOverlay />
       </StyledNavItem>
